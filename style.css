@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root{
+    --padding-sec: 0 400px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    display: block;
+    overflow-x: hidden;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100vw;
+    z-index: 998;
+}
+
+.header a{
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    padding-top: 20px;
+    color: white;
+    animation: upanim 1s ease-out;
+}
+
+@keyframes upanim{
+    from{
+        transform: translateY(-50px);
+    }
+}
+
+aside{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    z-index: 999;
+    animation: sidetext 1s ease-out;
+}
+
+aside a{
+    padding-left: 10px;
+    color: white;
+}
+
+
+#first-sec{
+    background-image: url(/images/layered-waves-haikei.svg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    color: white;
+}
+
+#first-sec div{
+    height: 100vh;
+    top: 20vh;
+    left: 10vw;
+    position: absolute;
+    padding: 40px;
+}
+
+#first-sec div .title{
+    font-size: 100px;
+    animation: sidetext 1.5s ease-out;
+}
+
+#first-sec div .subtitle{
+    font-size: 30px;
+    animation: sidetext 2s ease-out;
+}
+
+#first-sec div .legend-text{
+    animation: sidetext 2.3s ease-out;
+}
+
+#first-sec div .sec-text{
+    width: 500px;
+    animation: sidetext 2.5s ease-out;
+}
+
+#first-sec div .info-text{
+    padding-top: 20px;
+    width: 500px;
+    animation: sidetext 2.7s ease-out;
+}
+#first-sec .chamada{
+    position: relative;
+    width: 100%;
+}
+#first-sec .chamada h4{
+    font-size: 30px;
+    color: #001220;
+    position: absolute;
+    bottom: 30vh;
+    width: 500px;
+    z-index: 999;
+    animation: sidetext 3s ease-out;
+}
+#first-sec .chamada span{
+    font-size: 35px;
+    color: #ffffff;
+}
+
+@keyframes sidetext{
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+}
+#first-sec img{
+    width: 800px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation: bounce 2s ease infinite;
+    transition: all .3s ease-in-out;
+}
+
+#first-sec img:hover{
+    width: 850px;
+}
+
+.arrow-down{
+    color: white;
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    left: 50%;
+    animation: bounce-arrow 1s infinite;
+}
+.arrow-down span{
+    font-size: 40px;
+}
+
+@keyframes bounce-arrow{
+    0%{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(-15px)
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(-50px)
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+
+#second-sec{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "header header"
+    "left right";
+    position: relative;
+    padding: var(--padding-sec);
+    height: 100vh;
+    background-color: #161617;
+}
+
+#second-sec .cont1{
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    grid-area: header;
+}
+
+#second-sec .cont1 div > h1{
+    font-size: 80px;
+    transition: all .5s ease-in-out;
+}
+#second-sec .cont1 div > h1:hover{
+    color: #D03267;
+}
+
+#second-sec .cont2{
+    display: grid;
+    place-items: center;
+    grid-area: left;
+    background-color: #000000;
+    border-radius: 5rem;
+    height: 400px;
+    width: 400px;
+}
+
+.cont2 img{
+    width: 300px;
+    transition: all .3s ease;
+}
+
+.cont2 img:hover{
+    transform: translateY(-30px);
+    cursor: pointer;
+}
+
+.txt-img{
+    opacity: 0;
+    padding-bottom: 10px;
+}
+
+.blur-anim{
+    animation: blurtext 1s ease;
+}
+
+@keyframes blurtext {
+    from{
+        filter: blur(10px);
+    }
+    to{
+        filter: blur(0);
+    }
+}
+.txt-img h1{
+    color: #D03267;
+}
+.txt-img p{
+    color: #ffffff;
+}
+
+#second-sec .cont3{
+    display: grid;
+    place-items: center;
+    grid-area: right;
+    background-color: #000000;
+    border-radius: 5rem;
+    height: 400px;
+    width: 400px;
+}
+
+#third-sec{
+    position: relative;
+    height: 100vh;
+    background-color: black;
+    padding: var(--padding-sec);
+}
+
