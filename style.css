@@ -15,6 +15,7 @@
 body{
     display: block;
     overflow-x: hidden;
+    width: 100vw;
 }
 .header{
     display: flex;
@@ -24,20 +25,41 @@ body{
     z-index: 998;
 }
 
+.header a > .buy-span{
+    position: relative;
+    transition: all .3s ease;
+}
+
+.bg-buy-anim{
+    background-color: #D03267;
+}
+
 .header a{
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 200px;
-    padding-top: 20px;
+    width: 230px;
+    height: 60px;
+    margin-top: 20px;
     color: white;
-    animation: upanim 1s ease-out;
 }
 
-@keyframes upanim{
+.msg-thanks{
+    border-radius: 2em;
+    padding-right: 3em;
+}
+
+@keyframes bgColor {
+    to{
+        background-color: #D03267;
+    }
+}
+
+@keyframes upToDownAnim{
     from{
         transform: translateY(-50px);
+        
     }
 }
 
@@ -143,6 +165,7 @@ aside a{
     z-index: 999;
     bottom: 0;
     left: 50%;
+    transform: translateX(-50%);
     animation: bounce-arrow 1s infinite;
 }
 .arrow-down span{
@@ -175,6 +198,7 @@ aside a{
 
 #second-sec{
     display: grid;
+    place-items: center;
     grid-template-columns: repeat(2,1fr);
     grid-template-areas: 
     "header header"
@@ -254,10 +278,68 @@ aside a{
     width: 400px;
 }
 
+.cont3 img{
+    width: 300px;
+    transition: all .3s ease;
+}
+
+.cont3 img:hover{
+    transform: translateY(-30px);
+    cursor: pointer;
+}
+
 #third-sec{
+    display: grid;
+    grid-template-rows: 200px auto 150px;
     position: relative;
     height: 100vh;
     background-color: black;
     padding: var(--padding-sec);
 }
 
+.header-sec-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-sec-3 h1{
+    color: #ffffff;
+    font-size: min(60px, 80px);
+    transition: all .5s ease-in-out;
+}
+.header-sec-3 h5{
+    color: #ffffff;
+}
+
+.cont-sec-3{
+    display: grid;
+    place-items: center;
+
+}
+.cont-sec-3 img{
+    width: min(100%, 1000px);
+    border-radius: 2em;
+}
+
+.footer-sec-3{
+    position: absolute;
+    z-index: 999;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-sec-3 h1{
+    color: #ffffff;
+    font-size: 30px;
+    transition: all .5s ease-in-out;
+}
+.footer-sec-3 h5{
+    color: #ffffff;
+}
