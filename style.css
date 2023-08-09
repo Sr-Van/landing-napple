@@ -215,6 +215,7 @@ aside {
     transition: all .5s ease-in-out;
 }
 .footer-sec-3 > a {
+    color: #FFFFFF;
     font-size: 12px;
     padding-top: 1em;
     text-decoration: underline;
